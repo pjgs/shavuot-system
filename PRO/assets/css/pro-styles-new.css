@@ -1,0 +1,453 @@
+/* ============================================================================
+   SHAVUOT PRO - ESTILOS COMPLETOS SEGÚN WIREFRAME
+   ============================================================================ */
+
+/* Variables */
+:root {
+    --pro-primary: #000000;
+    --pro-secondary: #333333;
+    --pro-border: #E0E0E0;
+    --pro-bg-light: #F5F5F5;
+    --white: #FFFFFF;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: var(--white);
+    color: var(--pro-primary);
+}
+
+/* ============================================================================
+   HERO CAROUSEL SECTION
+   ============================================================================ */
+
+.pro-hero-section {
+    position: relative;
+    width: 100%;
+    background: var(--white);
+    border-bottom: 2px solid var(--pro-border);
+    margin-top: 65px;
+}
+
+.hero-carousel {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 65px);
+    min-height: 500px;
+    max-height: 800px;
+    overflow: hidden;
+}
+
+.carousel-slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-slide.active {
+    display: block;
+}
+
+.carousel-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Carousel Indicators */
+.carousel-indicators {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+}
+
+.carousel-indicators .indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    border: 2px solid rgba(255, 255, 255, 0.9);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.carousel-indicators .indicator.active {
+    background: rgba(255, 255, 255, 1);
+    transform: scale(1.3);
+}
+
+.carousel-indicators .indicator:hover {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+/* ============================================================================
+   SEARCH SECTION
+   ============================================================================ */
+
+.search-section {
+    background: linear-gradient(120deg, #00CED1 0%, #4169E1 100%);
+    padding: 50px 20px;
+    border-bottom: none;
+}
+
+.search-title {
+    color: var(--white);
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.search-container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Category Selector */
+.category-selector {
+    position: relative;
+    background: var(--white);
+    border: 2px solid var(--pro-border);
+    border-radius: 50px;
+    padding: 12px 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 220px;
+}
+
+.category-dropdown {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--pro-primary);
+    cursor: pointer;
+    appearance: none;
+    width: 100%;
+}
+
+.dropdown-icon {
+    color: var(--pro-secondary);
+    font-size: 12px;
+    pointer-events: none;
+}
+
+/* Search Bar */
+.search-bar {
+    flex: 1;
+    max-width: 600px;
+    background: var(--white);
+    border: 2px solid var(--pro-border);
+    border-radius: 50px;
+    padding: 12px 25px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.search-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    color: var(--pro-secondary);
+}
+
+.search-input::placeholder {
+    color: #999;
+}
+
+.search-button {
+    background: transparent;
+    border: none;
+    color: var(--pro-secondary);
+    font-size: 18px;
+    cursor: pointer;
+    padding: 0;
+    transition: color 0.3s ease;
+}
+
+.search-button:hover {
+    color: var(--pro-primary);
+}
+
+/* ============================================================================
+   COMPANIES SECTION
+   ============================================================================ */
+
+.companies-section {
+    padding: 60px 20px;
+    background: var(--white);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.companies-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+/* Company Card */
+.company-card {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    transition: all 0.3s ease;
+    min-height: 280px;
+    overflow: hidden;
+}
+
+.company-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(255,255,255,0.7) 100%);
+    z-index: 1;
+    transition: opacity 0.4s ease;
+}
+
+.company-card > * {
+    position: relative;
+    z-index: 2;
+}
+
+.company-card:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.company-card:hover::before {
+    opacity: 0;
+}
+
+.company-logo {
+    width: 120px;
+    height: auto;
+    margin-bottom: 5px;
+    object-fit: contain;
+}
+
+.company-info {
+    background: transparent;
+    padding: 0;
+    border-radius: 6px;
+}
+
+.company-name {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--pro-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+}
+
+.company-description {
+    font-size: 12px;
+    color: var(--pro-secondary);
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+.btn-ver-mas {
+    background: transparent;
+    border: none;
+    color: var(--pro-primary);
+    padding: 0;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-ver-mas:hover {
+    color: #000;
+}
+
+.btn-ver-mas i {
+    font-size: 12px;
+}
+
+/* Load More Button */
+.load-more-container {
+    text-align: center;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-load-more {
+    background: transparent;
+    border: none;
+    color: var(--pro-primary);
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-load-more i {
+    font-size: 16px;
+}
+
+/* ============================================================================
+   FOOTER
+   ============================================================================ */
+
+/* Footer styles are inherited from global styles.css */
+
+/* ============================================================================
+   RESPONSIVE DESIGN
+   ============================================================================ */
+
+@media (max-width: 1024px) {
+    .companies-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    .pro-hero-section {
+        margin-top: 65px;
+    }
+    
+    .hero-carousel {
+        height: 500px;
+        min-height: 400px;
+        max-height: 600px;
+    }
+    
+    .search-section {
+        padding: 40px 15px;
+    }
+    
+    .search-title {
+        font-size: 24px;
+        margin-bottom: 25px;
+    }
+    
+    .search-container {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .category-selector,
+    .search-bar {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .companies-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .company-card {
+        padding: 30px 20px;
+        min-height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .pro-hero-section {
+        margin-top: 65px;
+    }
+    
+    .hero-carousel {
+        height: 400px;
+        min-height: 350px;
+        max-height: 500px;
+    }
+    
+    .search-section {
+        padding: 30px 10px;
+    }
+    
+    .search-title {
+        font-size: 18px;
+        margin-bottom: 20px;
+        line-height: 1.3;
+    }
+    
+    .category-selector,
+    .search-bar {
+        padding: 10px 20px;
+    }
+    
+    .companies-section {
+        padding: 40px 15px;
+    }
+    
+    .company-card {
+        padding: 25px 15px;
+        min-height: 220px;
+    }
+    
+    .company-logo-placeholder {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .company-logo-placeholder i {
+        font-size: 30px;
+    }
+    
+    .company-name {
+        font-size: 16px;
+    }
+    
+    .btn-ver-mas {
+        padding: 8px 25px;
+        font-size: 13px;
+    }
+    
+    .btn-load-more {
+        padding: 12px 40px;
+        font-size: 14px;
+    }
+}

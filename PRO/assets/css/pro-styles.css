@@ -1,0 +1,394 @@
+/* ============================================================================
+   SHAVUOT PRO - ESTILOS ESPECÍFICOS
+   ============================================================================ */
+
+/* Variables específicas para PRO */
+:root {
+    --pro-primary: #2C5530;
+    --pro-secondary: #4A7C59;
+    --pro-accent: #6B8E23;
+    --pro-light: #8FBC8F;
+    --pro-dark: #1B3B1F;
+    --pro-gradient: linear-gradient(135deg, #2C5530 0%, #4A7C59 50%, #2C5530 100%);
+}
+
+/* ============================================================================
+   HERO SECTION PRO
+   ============================================================================ */
+
+.pro-hero {
+    position: relative;
+    width: 100%;
+    background: linear-gradient(135deg, #00BCD4 0%, #2196F3 100%);
+}
+
+.hero-image-container {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 12px;
+    z-index: 10;
+}
+
+.carousel-indicators .indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    border: 2px solid rgba(255, 255, 255, 0.9);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.carousel-indicators .indicator.active {
+    background: rgba(255, 255, 255, 1);
+    transform: scale(1.3);
+}
+
+.carousel-indicators .indicator:hover {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+/* Search Section */
+.hero-search-section {
+    background: linear-gradient(135deg, #00BCD4 0%, #2196F3 100%);
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.hero-title {
+    color: var(--white);
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.search-container {
+    display: flex;
+    gap: 15px;
+    max-width: 900px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.category-dropdown {
+    background: var(--white);
+    padding: 15px 25px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    color: #333;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+.category-dropdown:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.category-dropdown i {
+    font-size: 12px;
+}
+
+.search-input-wrapper {
+    background: var(--white);
+    padding: 15px 25px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex: 1;
+    max-width: 600px;
+}
+
+.search-input {
+    border: none;
+    outline: none;
+    flex: 1;
+    font-size: 14px;
+    color: #999;
+}
+
+.search-input::placeholder {
+    color: #ccc;
+}
+
+.search-icon {
+    color: #666;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.pro-hero-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.1;
+    background-image:
+        radial-gradient(circle at 25% 25%, rgba(76, 175, 80, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 75% 75%, rgba(139, 195, 74, 0.3) 0%, transparent 50%);
+}
+
+.pro-hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.pro-hero-logo {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 40px;
+    filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3));
+}
+
+.pro-hero-title {
+    font-size: 64px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.pro-hero-subtitle {
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
+
+.pro-hero-description {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    opacity: 0.8;
+}
+
+.pro-cta-button {
+    background: linear-gradient(45deg, #CDDC39, #8BC34A);
+    color: var(--pro-dark);
+    padding: 15px 40px;
+    border: none;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(205, 220, 57, 0.3);
+    text-decoration: none;
+    display: inline-block;
+}
+
+.pro-cta-button:hover {
+    transform: scale(1.05) translateY(-2px);
+    box-shadow: 0 10px 25px rgba(205, 220, 57, 0.4);
+}
+
+/* Secciones de contenido PRO */
+.pro-section {
+    padding: 80px 0;
+    position: relative;
+}
+
+.pro-section-title {
+    font-size: 48px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 60px;
+    color: var(--pro-primary);
+}
+
+.pro-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin: 80px 0;
+}
+
+.pro-feature-card {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border-left: 5px solid var(--pro-primary);
+}
+
+.pro-feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.pro-feature-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--pro-gradient);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    color: var(--white);
+    font-size: 24px;
+}
+
+.pro-feature-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: var(--pro-primary);
+}
+
+.pro-feature-description {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666;
+}
+
+/* ============================================================================
+   RESPONSIVE DESIGN
+   ============================================================================ */
+
+@media (max-width: 768px) {
+    .hero-image-container {
+        height: 350px;
+    }
+    
+    .carousel-indicators {
+        bottom: 20px;
+        gap: 10px;
+    }
+    
+    .carousel-indicators .indicator {
+        width: 8px;
+        height: 8px;
+    }
+    
+    .hero-search-section {
+        padding: 40px 15px;
+    }
+    
+    .hero-title {
+        font-size: 24px;
+    }
+    
+    .search-container {
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .category-dropdown,
+    .search-input-wrapper {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .pro-hero-title {
+        font-size: 42px;
+    }
+    
+    .pro-hero-subtitle {
+        font-size: 18px;
+    }
+    
+    .pro-features {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        margin: 60px 0;
+    }
+    
+    .pro-feature-card {
+        padding: 30px;
+    }
+    
+    .pro-section-title {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-image-container {
+        height: 280px;
+    }
+    
+    .carousel-indicators {
+        bottom: 15px;
+        gap: 8px;
+    }
+    
+    .carousel-indicators .indicator {
+        width: 7px;
+        height: 7px;
+        border-width: 1px;
+    }
+    
+    .hero-search-section {
+        padding: 30px 10px;
+    }
+    
+    .hero-title {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+    
+    .category-dropdown,
+    .search-input-wrapper {
+        padding: 12px 20px;
+    }
+    
+    .search-input {
+        font-size: 13px;
+    }
+    
+    .pro-hero-title {
+        font-size: 32px;
+    }
+    
+    .pro-hero-subtitle {
+        font-size: 16px;
+    }
+    
+    .pro-hero-description {
+        font-size: 16px;
+    }
+    
+    .pro-cta-button {
+        padding: 12px 30px;
+        font-size: 16px;
+    }
+    
+    .pro-section-title {
+        font-size: 28px;
+    }
+}

@@ -1,0 +1,246 @@
+### **SITUACIÓN ACTUAL**
+
+### 1. Estado del Proyecto
+
+- [ ]  ¿En qué fase se encuentra actualmente el proyecto Shavuot_Edu?
+
+Actualmente se han podido lanzar 5 ciclos educativos, cada uno con su evento de cierre principal, año a año hemos ido mejorando tanto la estrategia digital como el evento presencial, si bien no tenemos un sistema automatizado, los objetivos de cada ciclo educativo se han logrado.
+
+- [ ]  ¿Qué funcionalidades ya están implementadas?
+
+Video educativos, sistema de inscripcion a travez de google form, test de cada video para afianzar el conocimiento a travez de google form, foro de discucion a travez de un grupo de whatsapp
+
+- [ ]  ¿Cuáles son las principales fortalezas de la plataforma actual?
+
+publico interezado en los ciclos educativos, empresas aliadas que participan año a año, profundo conocimiento en los temas y herramientas para crear los video educativos. web, con su dominio y hosting activos.
+
+- [ ]  ¿Qué limitaciones o problemas críticos hemos identificado?
+
+Sistema web que permita el registro de usuarios y un foro digital directamente en la web
+
+### 2. Recursos Disponibles
+
+- [x]  ¿Con qué presupuesto contamos para el desarrollo de la plataforma?
+
+- [ ]  ¿Cuál es el equipo técnico disponible? (desarrolladores, diseñadores, especialistas en contenido)
+
+Diseñadores graficos, Redactores de guiones, personal para grabar las pautas y edicion de videos, personal habil en el diseño web a travez de motores de AI.
+
+- [ ]  ¿Qué infraestructura tecnológica tenemos? (servidores, herramientas, licencias)
+
+Actualmente no tenemos servidores fisicos, tenemos un servicio de hosting pago y el aval educativo y legal de instituciones venezolanas (UCLA, INSAI)
+
+- [ ]  ¿Contamos con expertos en contenido agrícola disponibles?
+
+si, en varias de sus ramificaciones, planificacion, genetica, manejo de plagas y malezas, comercio, entre otros
+
+### 3. Análisis de Audiencia
+
+- [ ]  ¿Quiénes son nuestros usuarios objetivo? (productores pequeños, medianos, grandes / técnicos / estudiantes)
+
+Para el EDU, tenemos dos niveles, el primero la audiencia enfocada en productores y personal técnico agricola, estudiantes universitarios del agro y simpatizantes de la agricultura. El segundo nivel son los patrocinantes, empresas fabricantes de insumos agricolas (fertilizatantes, plaguicidad y herbicidad, semillas e implementos agricolas), comerciantes (cadenas de alimentos, exportadores, financiadores), asociaciones agricolas.
+
+- [ ]  ¿Cuáles son sus principales necesidades educativas?
+
+la informacion tecnica ya esta establecida, nosotros buscamos fucionar esa informacion, con el conocimiento empirico y los retos actuales que surgen en el campo, busca llevar a las personas a una siembra exitosa desde su planificacion hasta su venta.
+
+- [ ]  ¿Qué nivel de conocimiento tecnológico tienen nuestros usuarios?
+
+normalmente un nivel tecnico basico o avanzado, ya que la plataforma es usada por personas dedicadas al campo, productores y tecnicos
+
+- [ ]  ¿Qué dispositivos utilizan principalmente? (móviles, computadoras, tablets)
+
+moviles y computadoras
+
+### **B. CONTENIDO Y ESTRUCTURA EDUCATIVA**
+
+### 4. Ciclos Educativos
+
+- [ ]  ¿Cómo definiremos los rubros agrícolas a cubrir?
+
+horticultura, cereales, fruticultura
+
+- [ ]  ¿Cómo estructuraremos los ciclos por temporada de siembra?
+
+de acuerdo a la temporada en pie, inicialmente en tendencia a la realidad agricola de venezuela, por ejemplo, el ultimo y el primer trimestre del año es para cultivos de secano, y el segundo y tercer trimestre es para cultivos de invierno, tambien estan los ciclos de cafe, hortalizas y cultivos de hoja que pueden hacerse en cualquier momento siempre y cuando no choquen con los otros ciclos establecidos.
+
+- [ ]  ¿Cuál será la duración ideal de cada ciclo educativo?
+
+10 semanas
+
+- [ ]  ¿Qué nivel de profundidad tendrá cada curso? (básico, intermedio, avanzado)
+
+intermedio en cuanto a conocimiento tecnico profesional, avanzado en cuanto a especialidad del cultivo.
+
+### 5. Contenido Multimedia
+
+- [ ]  ¿Qué tipos de videos produciremos? (tutoriales, casos de estudio, entrevistas con expertos)
+
+video informativos y tecnicos, entrevistas con expoertos para ahondar los retos que se presentan en la vida real.
+
+- [ ]  ¿Cuál será la duración ideal de cada video?
+
+un maximo de 20min
+
+- [ ]  ¿Necesitamos contenido en múltiples idiomas?
+
+Por el momento no
+
+- [ ]  ¿Cómo garantizaremos la calidad y veracidad del contenido?
+
+El contenido es dictado por expertos en la materia, activos en el rubro y con peso curricular, ademas tenemos el aval de dos enter importantes, INSAI como organimos regulatorio agricola, UCLA como ente educativo nacional
+
+### 6. Sistema de Evaluación
+
+- [ ]  ¿Qué tipos de preguntas incluirán los tests?
+
+tres, multiple opcion, verdadero y falso, argumento sencillo
+
+- [ ]  ¿Cuántas preguntas por video consideramos óptimo?
+
+de 10 a 12 preguntas
+
+- [ ]  ¿Habrá certificaciones al completar los ciclos?
+
+Si, para quien complete todos los test.
+
+- [ ]  ¿Cómo mediremos el progreso de aprendizaje?
+
+a travez de los test, que deberian ser llenados una sola ves sin opcion a ser corregidos.
+
+### **C. TECNOLOGÍA Y FUNCIONALIDADES**
+
+### 7. Plataforma Técnica
+
+- [x]  ¿Qué tecnologías utilizaremos para desarrollar la plataforma? (frontend, backend, base de datos)
+
+La plataforma se desarrollará utilizando tecnologías web compatibles con nuestro hosting en SiteGround (GoGeek):
+
+Frontend: HTML5, CSS3 y JavaScript, con posibilidad de usar frameworks modernos como React o Vue.Backend: PHP (versiones a elección), potencialmente usando frameworks como Laravel o Symfony.Base de datos: MySQL o PostgreSQL, según las necesidades del proyecto.
+
+- Frontend: HTML5, CSS3 y JavaScript, con posibilidad de usar frameworks modernos como React o Vue.
+- Backend: PHP (versiones a elección), potencialmente usando frameworks como Laravel o Symfony.
+- Base de datos: MySQL o PostgreSQL, según las necesidades del proyecto.
+
+Nuestro hosting permite gestión avanzada con acceso a SSH, SFTP y backups diarios automáticos. También ofrece herramientas de staging, git integrado y posibilidad de entornos de pruebas, lo que facilita un desarrollo profesional y seguro.
+
+- [x]  ¿La plataforma será responsive para dispositivos móviles?
+
+si
+
+- [x]  ¿Necesitamos una aplicación móvil nativa?
+
+no, será tipo webapp
+
+- [x]  ¿Qué herramientas de hosting y CDN utilizaremos?
+
+Con SiteGround, el hosting y la CDN trabajan juntos para ofrecer una experiencia rápida y eficiente:
+
+- **Hosting:** Mantiene tu sitio en línea y te permite gestionar todos sus aspectos desde Site Tools.
+- **CDN:** Complementa el hosting, distribuyendo el contenido estático para que se cargue más rápido sin importar dónde se encuentre el visitante.
+
+### 8. Funcionalidades del Foro
+
+- [ ]  ¿Cómo estructuraremos los foros de discusión? (por tema, por región, por nivel)
+
+el foro en web se deberia dar como chat de opinion por video, ya que cada video deberia tener su propio blog.
+
+- [ ]  ¿Habrá moderadores especializados en cada área?
+
+Si, en realidad los moderadores estaran atento en toda la temporada
+
+- [ ]  ¿Permitiremos compartir archivos, imágenes y documentos?
+
+no
+
+- [ ]  ¿Cómo manejaremos las notificaciones y el engagement?
+
+no sabria decirlo
+
+### 9. Sistema de Usuarios
+
+- [ ]  ¿Qué tipos de perfiles de usuario tendremos?
+
+Usuario standar, empresarial, administrador
+
+- [ ]  ¿Cómo será el proceso de registro y verificación?
+
+sera un proceso manual para el usuario empresarial, y automatizado para el usuario standar ya que este no compete pago.
+
+- [ ]  ¿Implementaremos gamificación? (puntos, badges, rankings)
+
+tengo desconocimiento de los terminos de esta pregunta.
+
+- [ ]  ¿Habrá perfiles públicos para networking?
+
+si el Usuario Standar no compete pago, solo si desea la certificacion un monto pequeño.
+
+### **D. MODELO DE NEGOCIO Y SOSTENIBILIDAD**
+
+### 10. Monetización
+
+- [ ]  ¿La plataforma será gratuita, freemium o de pago?
+
+no aplica
+
+- [ ]  ¿Consideraremos suscripciones, compras por curso o modelo mixto?
+
+no aplica
+
+- [ ]  ¿Habrá patrocinios de empresas del sector agrícola?
+
+no aplica
+
+- [ ]  ¿Ofreceremos servicios premium o consultoría especializada?
+
+no aplica
+
+### 11. Alianzas Estratégicas
+
+- [ ]  ¿Qué instituciones agrícolas podríamos asociar? (universidades, cooperativas, ministerios)
+
+no aplica
+
+- [ ]  ¿Necesitamos partnerships con expertos reconocidos del sector?
+
+no aplica
+
+- [ ]  ¿Consideraremos alianzas con empresas de tecnología agrícola?
+
+no aplica
+
+- [ ]  ¿Hay organizaciones internacionales que podrían apoyar el proyecto?
+
+no aplica
+
+### **E. MARKETING Y CRECIMIENTO**
+
+### 12. Estrategia de Lanzamiento
+
+- [ ]  ¿Haremos un lanzamiento beta con usuarios selectos?
+
+Si, mas que usuarios selectos, seria con un evento selecto que es el Foro de leguminosas.
+
+- [ ]  ¿Cuáles serán nuestros canales de marketing principales?
+
+Instagram y facebook
+
+- [ ]  ¿Participaremos en eventos y ferias agrícolas?
+
+Solo el organizado por nosotros mismos
+
+- [ ]  ¿Cómo mediremos el éxito del lanzamiento?
+
+con la participacion en los foros, views de los videos, asistencia en el evento de cierre, cantidad de patrocinantes obtenidos
+
+### 13. Crecimiento y Retención
+
+- [ ]  ¿Cuáles son nuestras metas de usuarios para el primer año?
+
+500 usuarios antes de diciembre, consegui 1000 usuarios para febrero
+
+- [ ]  ¿Cómo fomentaremos la participación activa en los foros?
+
+- [ ]  ¿Qué estrategias usaremos para retener usuarios?
+
+- [ ]  ¿Cómo recopilaremos feedback para mejoras continuas?
