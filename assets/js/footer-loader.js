@@ -1,4 +1,4 @@
-// Footer Loader - Carga el footer dinámicamente en todas las páginas
+// Cargador de Footer - Carga el pie de página dinámicamente en todas las páginas
 document.addEventListener('DOMContentLoaded', function() {
     const footerContainer = document.getElementById('footer-container');
     
@@ -29,18 +29,18 @@ document.addEventListener('DOMContentLoaded', function() {
             })
             .catch(error => {
                 console.error('Error cargando footer:', error);
-                // Fallback: insertar footer directamente
+                // Respaldo: insertar footer directamente
                 footerContainer.innerHTML = `
                     <footer class="footer">
                         <div class="container">
                             <div class="footer-content">
                                 <nav class="footer-nav">
-                                    <a href="#about">ABOUT US</a>
-                                    <a href="#terms">TERMS & CONDITIONS</a>
-                                    <a href="#contact">CONTACT US</a>
+                                    <a href="#about">NOSOTROS</a>
+                                    <a href="#terms">TÉRMINOS Y CONDICIONES</a>
+                                    <a href="#contact">CONTÁCTANOS</a>
                                 </nav>
                                 <p class="footer-copyright">
-                                    Copyright © 2025 Design Theme by <a href="#">www.shavuot.com</a>
+                                    Copyright © 2025 Diseño por <a href="#">www.shavuot.com</a>
                                 </p>
                             </div>
                         </div>
