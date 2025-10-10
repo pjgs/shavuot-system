@@ -565,21 +565,17 @@ body.menu-open {
     border-radius: 0;
     overflow: hidden;
     box-shadow: none;
-    transition: background-size 0.6s ease-in-out; /* Transición más lenta y suave */
-    cursor: pointer;
     position: relative;
     min-height: 500px;
-    background-size: cover; /* Cubrir toda la altura */
+    background-size: 100% auto; /* Tamaño normal del fondo */
     background-repeat: no-repeat;
     background-position: center center;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 0 60px; /* Separación horizontal proporcional */
-}
-
-.card:hover {
-    background-size: 105% auto; /* Zoom más sutil del fondo al 105% */
+    transition: background-size 0.6s ease-in-out; /* Transición solo para hover */
+    pointer-events: none; /* Deshabilitar eventos en el card */
 }
 
 /* Fondos específicos para cada tarjeta */
@@ -605,6 +601,7 @@ body.menu-open {
     position: relative;
     overflow: visible;
     padding: 0;
+    pointer-events: none; /* Deshabilitar eventos en el contenedor */
 }
 
 .card-img {
@@ -616,11 +613,19 @@ body.menu-open {
     z-index: 2; /* Por encima del fondo */
     transition: transform 0.3s ease, filter 0.3s ease;
     filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.2));
+    cursor: pointer;
+    pointer-events: auto; /* Habilitar eventos solo en la imagen */
 }
 
-.card:hover .card-img {
-    transform: scale(1.08); /* Zoom solo en la imagen, no en el card */
+/* Hover en la imagen activa el zoom tanto de la imagen como del fondo */
+.card-img:hover {
+    transform: scale(1.08); /* Zoom en la imagen */
     filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.3));
+}
+
+/* Cuando se hace hover en la imagen, también hacer zoom al fondo del card padre */
+.card:has(.card-img:hover) {
+    background-size: 105% auto; /* Zoom sutil del fondo al 105% */
 }
 
 /* ============================================================================
@@ -699,30 +704,7 @@ body.menu-open {
     transition-delay: 0.2s;
 }
 
-/* Animar solo las tarjetas, no el fondo de la sección */
-.main-cards .card {
-    opacity: 0;
-    transform: translateY(15px) scale(0.99);
-    transition: opacity 0.9s ease-out, transform 0.9s ease-out;
-}
-
-.main-cards.content-visible .card {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-}
-
-/* Delay escalonado para las tarjetas */
-.main-cards.content-visible .card:nth-child(1) {
-    transition-delay: 0s;
-}
-
-.main-cards.content-visible .card:nth-child(2) {
-    transition-delay: 0.1s;
-}
-
-.main-cards.content-visible .card:nth-child(3) {
-    transition-delay: 0.2s;
-}
+/* Las tarjetas no tienen animación de entrada, solo hover */
 
 /* Hero section - animación sutil desde los extremos hacia el centro */
 .hero .hero-icon {

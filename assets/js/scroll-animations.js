@@ -46,8 +46,8 @@ function initScrollAnimations() {
     // Crear el observer
     const observer = new IntersectionObserver(observerCallback, observerOptions);
 
-    // Seleccionar todas las secciones a animar (excepto el hero)
-    const sections = document.querySelectorAll('.content-section, .main-cards');
+    // Seleccionar todas las secciones a animar (excepto el hero y main-cards)
+    const sections = document.querySelectorAll('.content-section');
     
     sections.forEach(section => {
         // Observar la sección
