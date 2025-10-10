@@ -5,13 +5,13 @@
 
 /* Variables CSS específicas para EDU */
 :root {
-    --edu-primary: #2E7D32;
-    --edu-secondary: #4CAF50;
-    --edu-accent: #81C784;
-    --edu-dark: #1B5E20;
-    --edu-light: #E8F5E8;
-    --edu-gradient: linear-gradient(135deg, #2E7D32 0%, #4CAF50 100%);
-    --edu-gradient-light: linear-gradient(135deg, #E8F5E8 0%, #C8E6C9 100%);
+    --edu-primary: #00CED1; /* Cyan principal */
+    --edu-secondary: #4169E1; /* Azul principal */
+    --edu-accent: #5B9BD5; /* Azul claro para acentos */
+    --edu-dark: #1E3A8A; /* Azul oscuro */
+    --edu-light: #E6F7F7; /* Cyan muy claro para fondos */
+    --edu-gradient: linear-gradient(135deg, #00CED1 0%, #4169E1 100%); /* Degradado cyan a azul */
+    --edu-gradient-light: linear-gradient(135deg, #E6F7F7 0%, #D6EBFF 100%);
     --shadow-light: 0 4px 6px rgba(0, 0, 0, 0.1);
     --shadow-medium: 0 8px 25px rgba(0, 0, 0, 0.15);
     --shadow-heavy: 0 15px 35px rgba(0, 0, 0, 0.2);
@@ -139,7 +139,7 @@
 
 .btn-primary {
     background: var(--white);
-    color: var(--edu-primary);
+    color: var(--edu-dark); /* Azul oscuro #1E3A8A para mejor contraste */
     box-shadow: var(--shadow-medium);
 }
 
@@ -205,7 +205,7 @@
 .section-title {
     font-size: clamp(2rem, 4vw, 3rem);
     font-weight: 700;
-    color: var(--edu-primary);
+    color: var(--edu-dark); /* Azul oscuro #1E3A8A para mejor contraste */
     margin-bottom: 16px;
 }
 
@@ -280,7 +280,7 @@
 .strength-title {
     font-size: 1.4rem;
     font-weight: 600;
-    color: var(--edu-primary);
+    color: var(--edu-dark); /* Azul oscuro #1E3A8A para mejor contraste */
     margin-bottom: 16px;
 }
 
@@ -353,7 +353,7 @@
 .plan-name {
     font-size: 1.5rem;
     font-weight: 600;
-    color: var(--edu-primary);
+    color: var(--edu-dark); /* Azul oscuro #1E3A8A para mejor contraste */
     margin-bottom: 16px;
 }
 
@@ -373,7 +373,7 @@
 .amount {
     font-size: 3rem;
     font-weight: 800;
-    color: var(--edu-primary);
+    color: var(--edu-dark); /* Azul oscuro #1E3A8A para mejor contraste */
 }
 
 .period {
@@ -519,7 +519,7 @@
 .timeline-content h3 {
     font-size: 1.5rem;
     font-weight: 600;
-    color: var(--edu-primary);
+    color: var(--edu-dark); /* Azul oscuro #1E3A8A para mejor contraste */
     margin-bottom: 12px;
     margin-top: 0;
     line-height: 1.2;
@@ -805,6 +805,7 @@
     .cta-buttons {
         flex-direction: column;
         gap: 15px;
+        align-items: center; /* Centrar botones en móvil */
     }
     
     .btn-primary.large, .btn-secondary.large {
@@ -951,6 +952,10 @@
         font-size: 1rem;
     }
     
+    .cta-buttons {
+        align-items: center; /* Centrar botones en móvil pequeño */
+    }
+    
     .btn-primary.large, .btn-secondary.large {
         max-width: 100%;
         padding: 16px 30px;
@@ -969,7 +974,7 @@
 }
 
 .edu-hero .hero-background span:nth-child(0) {
-    color: #81C784;
+    color: #5B9BD5;
     top: 83%;
     left: 93%;
     animation-duration: 6s;
@@ -979,7 +984,7 @@
 }
 
 .edu-hero .hero-background span:nth-child(1) {
-    color: #4CAF50;
+    color: #4169E1;
     top: 10%;
     left: 20%;
     animation-duration: 7s;
@@ -989,7 +994,7 @@
 }
 
 .edu-hero .hero-background span:nth-child(2) {
-    color: #2E7D32;
+    color: #00CED1;
     top: 70%;
     left: 75%;
     animation-duration: 12s;
@@ -999,7 +1004,7 @@
 }
 
 .edu-hero .hero-background span:nth-child(3) {
-    color: #81C784;
+    color: #5B9BD5;
     top: 40%;
     left: 50%;
     animation-duration: 8s;
@@ -1009,7 +1014,7 @@
 }
 
 .edu-hero .hero-background span:nth-child(4) {
-    color: #4CAF50;
+    color: #4169E1;
     top: 66%;
     left: 90%;
     animation-duration: 3s;
@@ -1019,7 +1024,7 @@
 }
 
 .edu-hero .hero-background span:nth-child(5) {
-    color: #2E7D32;
+    color: #00CED1;
     top: 90%;
     left: 10%;
     animation-duration: 9s;
