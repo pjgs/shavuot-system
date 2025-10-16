@@ -35,10 +35,9 @@ document.addEventListener('DOMContentLoaded', function() {
                         <div class="container">
                             <div class="footer-content">
                                 <nav class="footer-nav">
-                                    <a href="#about">NOSOTROS</a>
-                                    <a href="#terms">TÉRMINOS Y CONDICIONES</a>
-                                    <a href="#contact">CONTÁCTANOS</a>
-                                </nav>
+                                    <a href="#about">ABOUT US</a>
+                                    <a href="#terms">TERMS & CONDITIONS</a>
+                                    <a href="#contact">CONTACT US</a>
                                 <p class="footer-copyright">
                                     Copyright © 2025 Diseño por <a href="#">www.shavuot.com</a>
                                 </p>
