@@ -7,6 +7,10 @@
 header('Content-Type: application/json');
 
 // 1. Configuración
+header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Methods: POST, OPTIONS');
+header('Access-Control-Allow-Headers: Content-Type');
+
 $to_email = "support@shavuot.com";
 $subject_prefix = "[Shavuot System Contact] ";
 
