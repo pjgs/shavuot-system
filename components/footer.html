@@ -1,15 +1,23 @@
-<!-- Footer -->
+<!-- Footer Component - Modular y Reutilizable -->
 <footer class="footer">
     <div class="container">
         <div class="footer-content">
-            <nav class="footer-nav">
-                <a href="#about">ABOUT US</a>
-                <a href="#terms">TERMS & CONDITIONS</a>
-                <a href="#contact">CONTACT US</a>
-            </nav>
-            <p class="footer-copyright">
-                Copyright © 2025 Design Theme by <a href="#">www.shavuot.com</a>
-            </p>
+            <div class="footer-simple">
+                <div class="footer-links-simple">
+                    <a href="{{basePath}}about/index.html">About Us</a>
+                    <span class="separator">|</span>
+                    <a href="{{basePath}}contact/index.html">Contact</a>
+                    <span class="separator">|</span>
+                    <a href="{{basePath}}privacy/index.html">Privacy</a>
+                    <span class="separator">|</span>
+                    <a href="{{basePath}}terms/index.html">Terms</a>
+                    <span class="separator">|</span>
+                    <a href="{{basePath}}cookies/index.html">Cookies</a>
+                </div>
+                <p class="footer-copyright">
+                    &copy; 2025 Shavuot System. All rights reserved.
+                </p>
+            </div>
         </div>
     </div>
 </footer>

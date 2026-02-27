@@ -1,51 +1,116 @@
-// Cargador de Footer - Carga el pie de página dinámicamente en todas las páginas
-document.addEventListener('DOMContentLoaded', function() {
-    const footerContainer = document.getElementById('footer-container');
-    
-    if (footerContainer) {
-        // Determinar la ruta correcta según la ubicación de la página
-        const currentPath = window.location.pathname;
-        let footerPath = '../components/footer.html';
-        
-        // Si estamos en la raíz del sitio
-        if (currentPath.includes('index.html') && !currentPath.includes('/PRO/') && !currentPath.includes('/EDU/')) {
-            footerPath = 'components/footer.html';
-        }
-        
-        console.log('Cargando footer desde:', footerPath);
-        
-        // Cargar el footer
-        fetch(footerPath)
-            .then(response => {
-                if (!response.ok) {
-                    console.error('Footer no encontrado en:', footerPath);
-                    throw new Error('Footer no encontrado');
-                }
-                return response.text();
-            })
-            .then(html => {
-                footerContainer.innerHTML = html;
-                console.log('Footer cargado exitosamente');
-            })
-            .catch(error => {
-                console.error('Error cargando footer:', error);
-                // Respaldo: insertar footer directamente
-                footerContainer.innerHTML = `
-                    <footer class="footer">
-                        <div class="container">
-                            <div class="footer-content">
-                                <nav class="footer-nav">
-                                    <a href="#about">NOSOTROS</a>
-                                    <a href="#terms">TÉRMINOS Y CONDICIONES</a>
-                                    <a href="#contact">CONTÁCTANOS</a>
-                                </nav>
-                                <p class="footer-copyright">
-                                    Copyright © 2025 Diseño por <a href="#">www.shavuot.com</a>
-                                </p>
-                            </div>
-                        </div>
-                    </footer>
-                `;
-            });
+/**
+ * Footer Loader - Shavuot System HOME
+ *
+ * _footerScriptSrc se captura en el TOP-LEVEL (document.currentScript disponible).
+ */
+
+// ── Captura inmediata del src del script ────────────────────────────────────
+const _footerScriptSrc = document.currentScript ? document.currentScript.src : '';
+
+// ── Clase principal ─────────────────────────────────────────────────────────
+class FooterLoader {
+    constructor() {
+        this.basePath = this._calcBasePath();
+        console.log('[FooterLoader] basePath:', this.basePath);
     }
-});
+
+    _calcBasePath() {
+        try {
+            if (_footerScriptSrc) {
+                const scriptUrl = new URL(_footerScriptSrc);
+                const siteRoot = scriptUrl.pathname.replace(/\/assets\/js\/footer-loader\.js$/, '');
+
+                const pageUrl = new URL(window.location.href);
+                const pagePart = pageUrl.pathname;
+                const pageDir = pagePart.endsWith('/')
+                    ? pagePart
+                    : pagePart.substring(0, pagePart.lastIndexOf('/') + 1);
+
+                const relDir = pageDir.startsWith(siteRoot)
+                    ? pageDir.slice(siteRoot.length)
+                    : pageDir;
+
+                const depth = relDir.replace(/^\//, '').replace(/\/$/, '')
+                    .split('/').filter(Boolean).length;
+
+                return depth > 0 ? '../'.repeat(depth) : './';
+            }
+        } catch (e) {
+            console.warn('[FooterLoader] No se pudo calcular basePath desde URL:', e);
+        }
+
+        // Fallback: leer el atributo src relativo del DOM
+        for (const script of document.getElementsByTagName('script')) {
+            const src = script.getAttribute('src') || '';
+            if (src.includes('footer-loader.js')) {
+                const path = src.replace(/assets\/js\/footer-loader\.js$/, '');
+                return path || './';
+            }
+        }
+        return './';
+    }
+
+    async _loadTemplate() {
+        try {
+            const res = await fetch(`${this.basePath}components/footer.html`);
+            if (!res.ok) throw new Error(`HTTP ${res.status}`);
+            return await res.text();
+        } catch (err) {
+            console.warn('[FooterLoader] Fetch fallido, usando fallback:', err);
+            return this._fallback();
+        }
+    }
+
+    _fallback() {
+        return `
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-simple">
+                <div class="footer-links-simple">
+                    <a href="${this.basePath}about/index.html">About Us</a>
+                    <span class="separator">|</span>
+                    <a href="${this.basePath}contact/index.html">Contact</a>
+                    <span class="separator">|</span>
+                    <a href="${this.basePath}privacy/index.html">Privacy</a>
+                    <span class="separator">|</span>
+                    <a href="${this.basePath}terms/index.html">Terms</a>
+                    <span class="separator">|</span>
+                    <a href="${this.basePath}cookies/index.html">Cookies</a>
+                </div>
+                <p class="footer-copyright">
+                    &copy; 2025 Shavuot System. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>`;
+    }
+
+    _process(html) {
+        return html.replace(/\{\{basePath\}\}/g, this.basePath);
+    }
+
+    async insertFooter() {
+        const container = document.getElementById('footer-container');
+        if (!container) {
+            console.warn('[FooterLoader] No se encontró #footer-container');
+            return;
+        }
+        const raw = await this._loadTemplate();
+        container.innerHTML = this._process(raw);
+        console.log('[FooterLoader] Footer insertado');
+    }
+}
+
+// ── Auto-inicio ──────────────────────────────────────────────────────────────
+async function loadFooter() {
+    const loader = new FooterLoader();
+    await loader.insertFooter();
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', loadFooter);
+} else {
+    loadFooter();
+}

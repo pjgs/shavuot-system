@@ -1,26 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shavuot PRO - Companies Committed to Agricultural Progress</title>
-    
+
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="../favicoin-shavuot-system.svg">
-    
+
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <!-- CSS -->
     <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/footer-styles.css">
     <link rel="stylesheet" href="assets/css/pro-styles-new.css">
-    
-    <!-- Header Loader -->
+
+    <!-- Header Loader (componente compartido) -->
     <script src="../assets/js/header-loader.js"></script>
 </head>
+
 <body>
     <!-- Header se carga dinámicamente -->
 
@@ -74,8 +78,10 @@
         <div class="container">
             <div class="companies-grid">
                 <!-- Company Card 1 - AGROPIVOT -->
-                <div class="company-card" style="background-image: url('assets/images/agropivot/empresa-agropivot-imagen.webp');">
-                    <img src="assets/images/agropivot/empresa-agropivot-logo.webp" alt="Agropivot Logo" class="company-logo">
+                <div class="company-card"
+                    style="background-image: url('assets/images/agropivot/empresa-agropivot-imagen.webp');">
+                    <img src="assets/images/agropivot/empresa-agropivot-logo.webp" alt="Agropivot Logo"
+                        class="company-logo">
                     <div class="company-info">
                         <p class="company-description">PRODUCERS AND GRAIN EXPORTERS</p>
                         <button class="btn-ver-mas">
@@ -86,8 +92,10 @@
                 </div>
 
                 <!-- Company Card 2 - AGROFORTUNA -->
-                <div class="company-card" style="background-image: url('assets/images/agrofortuna/empresa-agrofortuna-imagen.webp');">
-                    <img src="assets/images/agrofortuna/empresa-agrofortuna-logo.webp" alt="Agrofortuna Logo" class="company-logo">
+                <div class="company-card"
+                    style="background-image: url('assets/images/agrofortuna/empresa-agrofortuna-imagen.webp');">
+                    <img src="assets/images/agrofortuna/empresa-agrofortuna-logo.webp" alt="Agrofortuna Logo"
+                        class="company-logo">
                     <div class="company-info">
                         <p class="company-description">COMPREHENSIVE AGRICULTURAL SERVICES</p>
                         <button class="btn-ver-mas">
@@ -98,8 +106,10 @@
                 </div>
 
                 <!-- Company Card 3 - AGRÍCOLA LATINA -->
-                <div class="company-card" style="background-image: url('assets/images/AgroLatina/empresa-agrilaca-imagen.webp');">
-                    <img src="assets/images/AgroLatina/empresa-agrilaca-logo.webp" alt="Agrícola Latina Logo" class="company-logo">
+                <div class="company-card"
+                    style="background-image: url('assets/images/AgroLatina/empresa-agrilaca-imagen.webp');">
+                    <img src="assets/images/AgroLatina/empresa-agrilaca-logo.webp" alt="Agrícola Latina Logo"
+                        class="company-logo">
                     <div class="company-info">
                         <p class="company-description">PRODUCERS AND GRAIN EXPORTERS</p>
                         <button class="btn-ver-mas">
@@ -122,7 +132,8 @@
                 </div>
 
                 <!-- Company Card 5 - OLACHEA -->
-                <div class="company-card" style="background-image: url('assets/images/Olachea/empresa-olachea-imagen.webp');">
+                <div class="company-card"
+                    style="background-image: url('assets/images/Olachea/empresa-olachea-imagen.webp');">
                     <img src="assets/images/Olachea/empresa-olachea-logo.webp" alt="Olachea Logo" class="company-logo">
                     <div class="company-info">
                         <p class="company-description">AGRICULTURAL EXCELLENCE SINCE 1940</p>
@@ -134,8 +145,10 @@
                 </div>
 
                 <!-- Company Card 6 - CARMENCA -->
-                <div class="company-card" style="background-image: url('assets/images/carmenca/empresa-carmenca-imagen.webp');">
-                    <img src="assets/images/carmenca/empresa-carmenca-logo.webp" alt="Carmenca Logo" class="company-logo">
+                <div class="company-card"
+                    style="background-image: url('assets/images/carmenca/empresa-carmenca-imagen.webp');">
+                    <img src="assets/images/carmenca/empresa-carmenca-logo.webp" alt="Carmenca Logo"
+                        class="company-logo">
                     <div class="company-info">
                         <p class="company-description">CARMENCA RICE, CREATING A TRADITION</p>
                         <button class="btn-ver-mas">
@@ -156,23 +169,13 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <nav class="footer-nav">
-                    <a href="#about">ABOUT US</a>
-                    <a href="#terms">TERMS & CONDITIONS</a>
-                    <a href="#contact">CONTACT US</a>
-                </nav>
-                <p class="footer-copyright">
-                    Copyright © 2025 Design Theme by <a href="#">www.shavuot.com</a>
-                </p>
-            </div>
-        </div>
-    </footer>
+    <!-- Footer se carga dinámicamente desde components/footer.html -->
+    <div id="footer-container"></div>
 
     <!-- JavaScript -->
     <script src="assets/js/pro-carousel.js"></script>
+    <!-- Footer Loader (componente compartido) -->
+    <script src="../assets/js/footer-loader.js"></script>
 </body>
+
 </html>

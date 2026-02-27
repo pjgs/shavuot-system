@@ -1,0 +1,95 @@
+/* ========================================
+   FOOTER STYLES - SHAVUOT SYSTEM HOME
+   ======================================== */
+
+.footer {
+    background: linear-gradient(135deg, #1E3A8A 0%, #0F172A 100%);
+    color: #FFFFFF;
+    padding: 40px 20px;
+    margin-top: 0;
+    animation: footerFadeIn 0.6s ease-out;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-simple {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+}
+
+.footer-links-simple {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer-links-simple a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links-simple a:hover {
+    color: #00CED1;
+}
+
+.footer-links-simple .separator {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.footer-copyright {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin: 0;
+    display: block;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .footer {
+        padding: 30px 20px;
+    }
+
+    .footer-links-simple {
+        gap: 12px;
+    }
+
+    .footer-links-simple a {
+        font-size: 0.88rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-links-simple {
+        gap: 10px;
+    }
+
+    .footer-links-simple a {
+        font-size: 0.82rem;
+    }
+
+    .footer-copyright {
+        font-size: 0.82rem;
+    }
+}
+
+/* Animación de entrada */
+@keyframes footerFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

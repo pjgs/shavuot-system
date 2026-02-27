@@ -57,6 +57,30 @@ body {
     filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
 }
 
+/* Header Actions (ícono usuario + hamburger) */
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.btn-login-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.15);
+    color: var(--white);
+    border-radius: 50%;
+    font-size: 18px;
+    backdrop-filter: blur(10px);
+    /* No clickeable */
+    pointer-events: none;
+    cursor: default;
+    user-select: none;
+}
+
 /* Hamburger Menu con animación mejorada */
 .hamburger-menu {
     background: transparent;
@@ -129,10 +153,23 @@ body {
 
 /* Animación de rebote al activar */
 @keyframes bounceIn {
-    0% { transform: scale(0.3); opacity: 0; }
-    50% { transform: scale(1.05); }
-    70% { transform: scale(0.9); }
-    100% { transform: scale(1); opacity: 1; }
+    0% {
+        transform: scale(0.3);
+        opacity: 0;
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    70% {
+        transform: scale(0.9);
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 .hamburger-menu.active {
@@ -546,7 +583,8 @@ body.menu-open {
     background: linear-gradient(180deg, #F5F5DC 0%, #FFF8DC 100%);
     position: relative;
     min-height: 500px;
-    overflow: hidden; /* Evitar que el zoom sobresalga */
+    overflow: hidden;
+    /* Evitar que el zoom sobresalga */
 }
 
 .cards-grid {
@@ -567,15 +605,19 @@ body.menu-open {
     box-shadow: none;
     position: relative;
     min-height: 500px;
-    background-size: 100% auto; /* Tamaño normal del fondo */
+    background-size: 100% auto;
+    /* Tamaño normal del fondo */
     background-repeat: no-repeat;
     background-position: center center;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 60px; /* Separación horizontal proporcional */
-    transition: background-size 0.6s ease-in-out; /* Transición solo para hover */
-    pointer-events: none; /* Deshabilitar eventos en el card */
+    padding: 0 60px;
+    /* Separación horizontal proporcional */
+    transition: background-size 0.6s ease-in-out;
+    /* Transición solo para hover */
+    pointer-events: none;
+    /* Deshabilitar eventos en el card */
 }
 
 /* Fondos específicos para cada tarjeta */
@@ -601,7 +643,8 @@ body.menu-open {
     position: relative;
     overflow: visible;
     padding: 0;
-    pointer-events: none; /* Deshabilitar eventos en el contenedor */
+    pointer-events: none;
+    /* Deshabilitar eventos en el contenedor */
 }
 
 .card-img {
@@ -610,22 +653,26 @@ body.menu-open {
     height: auto;
     object-fit: contain;
     position: relative;
-    z-index: 2; /* Por encima del fondo */
+    z-index: 2;
+    /* Por encima del fondo */
     transition: transform 0.3s ease, filter 0.3s ease;
     filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.2));
     cursor: pointer;
-    pointer-events: auto; /* Habilitar eventos solo en la imagen */
+    pointer-events: auto;
+    /* Habilitar eventos solo en la imagen */
 }
 
 /* Hover en la imagen activa el zoom tanto de la imagen como del fondo */
 .card-img:hover {
-    transform: scale(1.08); /* Zoom en la imagen */
+    transform: scale(1.08);
+    /* Zoom en la imagen */
     filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.3));
 }
 
 /* Cuando se hace hover en la imagen, también hacer zoom al fondo del card padre */
 .card:has(.card-img:hover) {
-    background-size: 105% auto; /* Zoom sutil del fondo al 105% */
+    background-size: 105% auto;
+    /* Zoom sutil del fondo al 105% */
 }
 
 /* ============================================================================
@@ -793,7 +840,7 @@ body.menu-open {
     direction: rtl;
 }
 
-.section-grid.reverse > * {
+.section-grid.reverse>* {
     direction: ltr;
 }
 
@@ -807,7 +854,7 @@ body.menu-open {
 
 .section-title.outline {
     color: var(--white);
-    text-shadow: 
+    text-shadow:
         -2px -2px 0 var(--primary-cyan),
         2px -2px 0 var(--primary-cyan),
         -2px 2px 0 var(--primary-cyan),
@@ -1063,7 +1110,8 @@ body.menu-open {
 .video-wrapper {
     position: relative;
     width: 100%;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    padding-bottom: 56.25%;
+    /* 16:9 aspect ratio */
     height: 0;
     overflow: hidden;
     border-radius: 10px;
@@ -1164,14 +1212,19 @@ body.menu-open {
     content: '';
     position: absolute;
     top: 0;
-    right: -50px; /* Empujar hacia la derecha para pegado total */
-    width: calc(100% + 100px); /* Extender más allá del contenedor */
-    height: 100%; /* Altura completa de la sección */
+    right: -50px;
+    /* Empujar hacia la derecha para pegado total */
+    width: calc(100% + 100px);
+    /* Extender más allá del contenedor */
+    height: 100%;
+    /* Altura completa de la sección */
     background: none;
     background-image: url('../images/seccion-sem-diseno-derecha.webp');
     background-repeat: no-repeat;
-    background-position: 100% 0%; /* Completamente a la derecha */
-    background-size: auto 100%; /* Altura completa, ancho proporcional */
+    background-position: 100% 0%;
+    /* Completamente a la derecha */
+    background-size: auto 100%;
+    /* Altura completa, ancho proporcional */
     mix-blend-mode: normal;
     opacity: 1;
     z-index: 1;
@@ -1222,7 +1275,7 @@ body.menu-open {
     font-weight: 700;
     line-height: 1.1;
     color: var(--white);
-    text-shadow: 
+    text-shadow:
         -2px -2px 0 #0092ce,
         2px -2px 0 #0092ce,
         -2px 2px 0 #0092ce,
@@ -1259,7 +1312,8 @@ body.menu-open {
 
 .scm-logo {
     width: 100%;
-    max-width: 320px; /* Reducido 20% de 400px */
+    max-width: 320px;
+    /* Reducido 20% de 400px */
     height: auto;
     transition: transform 0.3s ease, filter 0.3s ease;
     filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.2));
@@ -1484,10 +1538,7 @@ body.menu-open {
     color: transparent;
     position: relative;
     filter:
-        drop-shadow(-1px -1px 0 rgba(255, 255, 255, 0.8))
-        drop-shadow(1px -1px 0 rgba(255, 255, 255, 0.8))
-        drop-shadow(-1px 1px 0 rgba(255, 255, 255, 0.8))
-        drop-shadow(1px 1px 0 rgba(255, 255, 255, 0.8));
+        drop-shadow(-1px -1px 0 rgba(255, 255, 255, 0.8)) drop-shadow(1px -1px 0 rgba(255, 255, 255, 0.8)) drop-shadow(-1px 1px 0 rgba(255, 255, 255, 0.8)) drop-shadow(1px 1px 0 rgba(255, 255, 255, 0.8));
 }
 
 .tgc-title-solid {
@@ -1515,7 +1566,8 @@ body.menu-open {
 
 .tgc-logo {
     width: 100%;
-    max-width: 320px; /* Reducido 20% de 400px */
+    max-width: 320px;
+    /* Reducido 20% de 400px */
     height: auto;
     transition: transform 0.3s ease, filter 0.3s ease;
     filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.2));
@@ -1549,13 +1601,18 @@ body.menu-open {
     content: '';
     position: absolute;
     top: 0;
-    left: -50px; /* Empujar hacia la izquierda para pegado total */
-    width: calc(100% + 100px); /* Extender más allá del contenedor */
-    height: 100%; /* Altura completa de la sección */
+    left: -50px;
+    /* Empujar hacia la izquierda para pegado total */
+    width: calc(100% + 100px);
+    /* Extender más allá del contenedor */
+    height: 100%;
+    /* Altura completa de la sección */
     background-image: url('../images/seccion-lab-diseno-izquierda.webp');
     background-repeat: no-repeat;
-    background-position: 0% 0%; /* Completamente a la izquierda */
-    background-size: auto 100%; /* Altura completa, ancho proporcional */
+    background-position: 0% 0%;
+    /* Completamente a la izquierda */
+    background-size: auto 100%;
+    /* Altura completa, ancho proporcional */
     mix-blend-mode: normal;
     opacity: 1;
     z-index: 1;
@@ -1568,12 +1625,15 @@ body.menu-open {
     position: absolute;
     top: 0;
     right: 0;
-    width: 50%; /* Ocupa la mitad derecha */
-    height: 100%; /* Altura completa de la sección */
+    width: 50%;
+    /* Ocupa la mitad derecha */
+    height: 100%;
+    /* Altura completa de la sección */
     background-image: url('../images/Fondo-360-b.png');
     background-repeat: no-repeat;
     background-position: right center;
-    background-size: auto 100%; /* Altura completa, ancho proporcional */
+    background-size: auto 100%;
+    /* Altura completa, ancho proporcional */
     mix-blend-mode: normal;
     opacity: 1;
     z-index: 1;
@@ -1584,13 +1644,17 @@ body.menu-open {
 .s360-image-front {
     position: absolute;
     top: 0;
-    right: 30px; /* Separada 30px de la derecha */
-    width: 45%; /* Ancho para la imagen frontal */
-    height: 100%; /* Altura máxima de la sección */
+    right: 30px;
+    /* Separada 30px de la derecha */
+    width: 45%;
+    /* Ancho para la imagen frontal */
+    height: 100%;
+    /* Altura máxima de la sección */
     background-image: url('../images/Fondo-360-a.png');
     background-repeat: no-repeat;
     background-position: right center;
-    background-size: auto 100%; /* Altura completa, ancho proporcional */
+    background-size: auto 100%;
+    /* Altura completa, ancho proporcional */
     mix-blend-mode: normal;
     opacity: 1;
     z-index: 2;
@@ -1603,7 +1667,8 @@ body.menu-open {
     gap: 60px;
     align-items: center;
     position: relative;
-    z-index: 10; /* Por encima de las imágenes de fondo */
+    z-index: 10;
+    /* Por encima de las imágenes de fondo */
 }
 
 .s360-left {
@@ -1622,7 +1687,7 @@ body.menu-open {
     font-weight: 700;
     line-height: 1.1;
     color: var(--white);
-    text-shadow: 
+    text-shadow:
         -2px -2px 0 #0092ce,
         2px -2px 0 #0092ce,
         -2px 2px 0 #0092ce,
@@ -1651,7 +1716,8 @@ body.menu-open {
 
 .s360-logo {
     width: 100%;
-    max-width: 320px; /* Reducido 20% de 400px */
+    max-width: 320px;
+    /* Reducido 20% de 400px */
     height: auto;
     transition: transform 0.3s ease, filter 0.3s ease;
     filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.2));
@@ -1776,8 +1842,10 @@ body.menu-open {
     }
 
     .card {
-        min-height: 400px; /* Altura mínima en tablets */
-        padding: 0 40px; /* Reducir padding en tablets */
+        min-height: 400px;
+        /* Altura mínima en tablets */
+        padding: 0 40px;
+        /* Reducir padding en tablets */
     }
 
     .card-img {
@@ -1810,11 +1878,16 @@ body.menu-open {
 
     /* Ajustes responsivos para imágenes de fondo en tablets */
     .content-section.scm-section::before {
-        right: -40px; /* Empujar hacia la derecha en tablets */
-        width: calc(100% + 80px); /* Extender más allá del contenedor */
-        height: 100%; /* Altura completa también en tablets */
-        background-size: auto 100%; /* Altura completa, ancho proporcional */
-        background-position: 100% 0%; /* Completamente a la derecha */
+        right: -40px;
+        /* Empujar hacia la derecha en tablets */
+        width: calc(100% + 80px);
+        /* Extender más allá del contenedor */
+        height: 100%;
+        /* Altura completa también en tablets */
+        background-size: auto 100%;
+        /* Altura completa, ancho proporcional */
+        background-position: 100% 0%;
+        /* Completamente a la derecha */
         opacity: 1;
         mix-blend-mode: normal;
     }
@@ -1846,11 +1919,16 @@ body.menu-open {
 
     /* Ajustes responsivos para imágenes de fondo 360 en tablets */
     .s360-section::before {
-        left: -40px; /* Empujar hacia la izquierda en tablets */
-        width: calc(100% + 80px); /* Extender más allá del contenedor */
-        height: 100%; /* Altura completa también en tablets */
-        background-size: auto 100%; /* Altura completa, ancho proporcional */
-        background-position: 0% 0%; /* Completamente a la izquierda */
+        left: -40px;
+        /* Empujar hacia la izquierda en tablets */
+        width: calc(100% + 80px);
+        /* Extender más allá del contenedor */
+        height: 100%;
+        /* Altura completa también en tablets */
+        background-size: auto 100%;
+        /* Altura completa, ancho proporcional */
+        background-position: 0% 0%;
+        /* Completamente a la izquierda */
     }
 
     .s360-section::after {
@@ -1925,11 +2003,15 @@ body.menu-open {
 
     /* Ajustes responsivos para imágenes de fondo TGC en tablets */
     .content-section.tgc-section::before {
-        right: -40px; /* Empujar mucho más hacia la derecha en tablets */
-        width: calc(100% + 80px); /* Extender mucho más allá del contenedor */
+        right: -40px;
+        /* Empujar mucho más hacia la derecha en tablets */
+        width: calc(100% + 80px);
+        /* Extender mucho más allá del contenedor */
         height: 100%;
-        background-size: auto 100%; /* Altura completa también en tablets */
-        background-position: 100% 0%; /* Completamente a la derecha */
+        background-size: auto 100%;
+        /* Altura completa también en tablets */
+        background-position: 100% 0%;
+        /* Completamente a la derecha */
         opacity: 1;
         mix-blend-mode: normal;
         z-index: 1;
@@ -1942,7 +2024,8 @@ body.menu-open {
         background-position: bottom left;
         opacity: 1;
         mix-blend-mode: normal;
-        z-index: 0; /* Al fondo, detrás del texto */
+        z-index: 0;
+        /* Al fondo, detrás del texto */
     }
 
     .footer-nav {
@@ -2009,27 +2092,35 @@ body.menu-open {
 
     /* Ajustar tarjetas en móvil */
     .card {
-        min-height: 350px; /* Altura mínima en móviles */
-        padding: 0 20px; /* Reducir padding en móviles */
+        min-height: 350px;
+        /* Altura mínima en móviles */
+        padding: 0 20px;
+        /* Reducir padding en móviles */
     }
 
     .card-img {
-        max-width: 240px; /* Aumentado 20% (200px * 1.2 = 240px) */
-        transform: scale(1) !important; /* Sin reducción, tamaño normal */
+        max-width: 240px;
+        /* Aumentado 20% (200px * 1.2 = 240px) */
+        transform: scale(1) !important;
+        /* Sin reducción, tamaño normal */
     }
 
     .card:hover .card-img {
-        transform: scale(1.08) !important; /* Zoom normal al hacer hover */
+        transform: scale(1.08) !important;
+        /* Zoom normal al hacer hover */
     }
 
     /* Ajustes responsivos para imágenes de fondo en móviles */
     .content-section.scm-section::before {
-        display: none; /* Ocultar imagen superior derecha en móvil */
+        display: none;
+        /* Ocultar imagen superior derecha en móvil */
     }
 
     .content-section.scm-section::after {
-        width: 62%; /* 77% - 20% = 62% */
-        height: 45%; /* 56% - 20% = 45% */
+        width: 62%;
+        /* 77% - 20% = 62% */
+        height: 45%;
+        /* 56% - 20% = 45% */
         background-size: cover;
         background-position: bottom left;
         opacity: 1;
@@ -2049,7 +2140,8 @@ body.menu-open {
     }
 
     .scm-logo {
-        max-width: 200px; /* Mismo tamaño que TEC en móvil */
+        max-width: 200px;
+        /* Mismo tamaño que TEC en móvil */
     }
 
     .s360-title-outline {
@@ -2062,12 +2154,14 @@ body.menu-open {
     }
 
     .s360-logo {
-        max-width: 200px; /* Mismo tamaño que TEC en móvil */
+        max-width: 200px;
+        /* Mismo tamaño que TEC en móvil */
     }
 
     /* Ajustes responsivos para imágenes de fondo 360 en móviles */
     .s360-section::before {
-        display: none; /* Ocultar imagen izquierda en móvil */
+        display: none;
+        /* Ocultar imagen izquierda en móvil */
     }
 
     .s360-section::after {
@@ -2076,7 +2170,8 @@ body.menu-open {
         right: 0;
         left: 0;
         width: 100%;
-        height: 50%; /* Reducir altura para no cubrir el texto */
+        height: 50%;
+        /* Reducir altura para no cubrir el texto */
         background-position: center bottom;
         background-size: contain;
         z-index: 1;
@@ -2088,7 +2183,8 @@ body.menu-open {
         right: 0;
         left: 0;
         width: 100%;
-        height: 45%; /* Reducir altura para no cubrir el texto */
+        height: 45%;
+        /* Reducir altura para no cubrir el texto */
         background-position: center bottom;
         background-size: contain;
         z-index: 2;
@@ -2134,7 +2230,8 @@ body.menu-open {
 
     /* Ajustes responsivos para imágenes de fondo TGC en móviles */
     .content-section.tgc-section::before {
-        display: none; /* Ocultar imagen superior derecha en móvil */
+        display: none;
+        /* Ocultar imagen superior derecha en móvil */
     }
 
     .content-section.tgc-section::after {
@@ -2144,7 +2241,8 @@ body.menu-open {
         background-position: bottom left;
         opacity: 1;
         mix-blend-mode: normal;
-        z-index: 0; /* Al fondo, detrás del texto en móvil */
+        z-index: 0;
+        /* Al fondo, detrás del texto en móvil */
     }
 }
 
@@ -2355,13 +2453,17 @@ body.menu-open {
     content: '';
     position: absolute;
     top: 0;
-    right: -50px; /* Empujar mucho más hacia la derecha */
-    width: calc(100% + 100px); /* Extender mucho más allá del contenedor */
+    right: -50px;
+    /* Empujar mucho más hacia la derecha */
+    width: calc(100% + 100px);
+    /* Extender mucho más allá del contenedor */
     height: 100%;
     background-image: url('../images/seccion-tec-diseno-derecha.webp');
     background-repeat: no-repeat;
-    background-position: 100% 0%; /* Completamente a la derecha */
-    background-size: auto 100%; /* Altura completa de la sección, ancho proporcional */
+    background-position: 100% 0%;
+    /* Completamente a la derecha */
+    background-size: auto 100%;
+    /* Altura completa de la sección, ancho proporcional */
     mix-blend-mode: normal;
     opacity: 1;
     z-index: 1;
@@ -2382,7 +2484,8 @@ body.menu-open {
     background-size: auto 100%;
     mix-blend-mode: normal;
     opacity: 1;
-    z-index: 0; /* Completamente al fondo, detrás del texto */
+    z-index: 0;
+    /* Completamente al fondo, detrás del texto */
     pointer-events: none;
 }
 
@@ -2562,7 +2665,8 @@ body.menu-open {
 .videos-grid,
 .tgc-grid {
     position: relative;
-    z-index: 10; /* Mayor z-index para estar por encima de las imágenes de fondo */
+    z-index: 10;
+    /* Mayor z-index para estar por encima de las imágenes de fondo */
 }
 
 .videos-center,
@@ -2606,7 +2710,7 @@ body.menu-open {
         padding-top: 0;
         padding-bottom: 0;
     }
-    
+
     .videos-title-centered {
         padding: 5px 7px;
         font-size: 28px;
@@ -2619,15 +2723,15 @@ body.menu-open {
         text-align: center;
         line-height: 1.1;
     }
-    
+
     .desktop-text {
         display: none;
     }
-    
+
     .mobile-text {
         display: block;
     }
-    
+
     .videos-background {
         background-image: none !important;
         background-position: left bottom;
@@ -2646,7 +2750,7 @@ body.menu-open {
         padding-top: 0;
         padding-bottom: 0;
     }
-    
+
     .videos-title-centered {
         font-size: 24px;
         padding: 2.5px 3.5px;
@@ -2659,15 +2763,15 @@ body.menu-open {
         text-align: center;
         line-height: 1.1;
     }
-    
+
     .desktop-text {
         display: none;
     }
-    
+
     .mobile-text {
         display: block;
     }
-    
+
     .videos-background {
         background-image: none !important;
         background-position: left bottom;
