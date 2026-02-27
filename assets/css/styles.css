@@ -647,6 +647,16 @@ body.menu-open {
     /* Deshabilitar eventos en el contenedor */
 }
 
+.card-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    pointer-events: auto;
+}
+
 .card-img {
     width: 100%;
     max-width: 350px;
